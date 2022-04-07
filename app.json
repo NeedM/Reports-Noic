@@ -1,0 +1,42 @@
+{
+  "id": "a4961a9d-b787-4aee-a5ae-3c03acf9aaee",
+  "name": "Reports Noic",
+  "publisher": "Default publisher",
+  "version": "1.0.0.2",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "bec2a381-a872-4e0a-9f1e-bb1fafd2fb30",
+      "name": "Loading",
+      "publisher": "Gutridge Business Solutions",
+      "version": "1.0.0.0"
+    } ,
+    {
+      "id": "d09a3e85-96e9-4d58-8a4b-5ce29de7992e",
+      "name": "Asset Maintenance",
+      "publisher": "Gutridge Business Solutions",
+      "version": "1.0.0.0"
+    } 
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "19.0.0.13",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50500
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "runtime": "8.0"
+}

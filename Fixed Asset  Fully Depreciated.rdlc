@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="MainHeadLineText">
+          <DataField>MainHeadLineText</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="DeprBookText">
+          <DataField>DeprBookText</DataField>
+        </Field>
+        <Field Name="CurrReportPAGENO">
+          <DataField>CurrReportPAGENO</DataField>
+        </Field>
+        <Field Name="CompanyInformationPicture">
+          <DataField>CompanyInformationPicture</DataField>
+        </Field>
+        <Field Name="Fixed_Asset__TABLECAPTION__________FAFilter">
+          <DataField>Fixed_Asset__TABLECAPTION__________FAFilter</DataField>
+        </Field>
+        <Field Name="FAFilter">
+          <DataField>FAFilter</DataField>
+        </Field>
+        <Field Name="PrintDetails">
+          <DataField>PrintDetails</DataField>
+        </Field>
+        <Field Name="BudgetReport">
+          <DataField>BudgetReport</DataField>
+        </Field>
+        <Field Name="GroupTotals">
+          <DataField>GroupTotals</DataField>
+        </Field>
+        <Field Name="GroupCodeName">
+          <DataField>GroupCodeName</DataField>
+        </Field>
+        <Field Name="HeadLineText_1_">
+          <DataField>HeadLineText_1_</DataField>
+        </Field>
+        <Field Name="HeadLineText_2_">
+          <DataField>HeadLineText_2_</DataField>
+        </Field>
+        <Field Name="HeadLineText_3_">
+          <DataField>HeadLineText_3_</DataField>
+        </Field>
+        <Field Name="HeadLineText_4_">
+          <DataField>HeadLineText_4_</DataField>
+        </Field>
+        <Field Name="HeadLineText_5_">
+          <DataField>HeadLineText_5_</DataField>
+        </Field>
+        <Field Name="HeadLineText_6_">
+          <DataField>HeadLineText_6_</DataField>
+        </Field>
+        <Field Name="HeadLineText_7_">
+          <DataField>HeadLineText_7_</DataField>
+        </Field>
+        <Field Name="HeadLineText_8_">
+          <DataField>HeadLineText_8_</DataField>
+        </Field>
+        <Field Name="HeadLineText_9_">
+          <DataField>HeadLineText_9_</DataField>
+        </Field>
+        <Field Name="HeadLineText_10_">
+          <DataField>HeadLineText_10_</DataField>
+        </Field>
+        <Field Name="FANo">
+          <DataField>FANo</DataField>
+        </Field>
+        <Field Name="FADescription">
+          <DataField>FADescription</DataField>
+        </Field>
+        <Field Name="GroupHeadLine">
+          <DataField>GroupHeadLine</DataField>
+        </Field>
+        <Field Name="Fixed_Asset__No__">
+          <DataField>Fixed_Asset__No__</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_Description">
+          <DataField>Fixed_Asset_Description</DataField>
+        </Field>
+        <Field Name="StartAmounts_1_">
+          <DataField>StartAmounts_1_</DataField>
+        </Field>
+        <Field Name="StartAmounts_1_Format">
+          <DataField>StartAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="NetChangeAmounts_1_">
+          <DataField>NetChangeAmounts_1_</DataField>
+        </Field>
+        <Field Name="NetChangeAmounts_1_Format">
+          <DataField>NetChangeAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="DisposalAmounts_1_">
+          <DataField>DisposalAmounts_1_</DataField>
+        </Field>
+        <Field Name="DisposalAmounts_1_Format">
+          <DataField>DisposalAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_1_">
+          <DataField>TotalEndingAmounts_1_</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_1_Format">
+          <DataField>TotalEndingAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="StartAmounts_2_">
+          <DataField>StartAmounts_2_</DataField>
+        </Field>
+        <Field Name="StartAmounts_2_Format">
+          <DataField>StartAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="NetChangeAmounts_2_">
+          <DataField>NetChangeAmounts_2_</DataField>
+        </Field>
+        <Field Name="NetChangeAmounts_2_Format">
+          <DataField>NetChangeAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="DisposalAmounts_2_">
+          <DataField>DisposalAmounts_2_</DataField>
+        </Field>
+        <Field Name="DisposalAmounts_2_Format">
+          <DataField>DisposalAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_2_">
+          <DataField>TotalEndingAmounts_2_</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_2_Format">
+          <DataField>TotalEndingAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="BookValueAtStartingDate">
+          <DataField>BookValueAtStartingDate</DataField>
+        </Field>
+        <Field Name="BookValueAtStartingDateFormat">
+          <DataField>BookValueAtStartingDateFormat</DataField>
+        </Field>
+        <Field Name="BookValueAtEndingDate">
+          <DataField>BookValueAtEndingDate</DataField>
+        </Field>
+        <Field Name="BookValueAtEndingDateFormat">
+          <DataField>BookValueAtEndingDateFormat</DataField>
+        </Field>
+        <Field Name="FORMAT_Text002__________GroupHeadLine_">
+          <DataField>FORMAT_Text002__________GroupHeadLine_</DataField>
+        </Field>
+        <Field Name="GroupStartAmounts_1_">
+          <DataField>GroupStartAmounts_1_</DataField>
+        </Field>
+        <Field Name="GroupStartAmounts_1_Format">
+          <DataField>GroupStartAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="GroupNetChangeAmounts_1_">
+          <DataField>GroupNetChangeAmounts_1_</DataField>
+        </Field>
+        <Field Name="GroupNetChangeAmounts_1_Format">
+          <DataField>GroupNetChangeAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="GroupDisposalAmounts_1_">
+          <DataField>GroupDisposalAmounts_1_</DataField>
+        </Field>
+        <Field Name="GroupDisposalAmounts_1_Format">
+          <DataField>GroupDisposalAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_1__Control48">
+          <DataField>TotalEndingAmounts_1__Control48</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_1__Control48Format">
+          <DataField>TotalEndingAmounts_1__Control48Format</DataField>
+        </Field>
+        <Field Name="GroupStartAmounts_2_">
+          <DataField>GroupStartAmounts_2_</DataField>
+        </Field>
+        <Field Name="GroupStartAmounts_2_Format">
+          <DataField>GroupStartAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="GroupNetChangeAmounts_2_">
+          <DataField>GroupNetChangeAmounts_2_</DataField>
+        </Field>
+        <Field Name="GroupNetChangeAmounts_2_Format">
+          <DataField>GroupNetChangeAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="GroupDisposalAmounts_2_">
+          <DataField>GroupDisposalAmounts_2_</DataField>
+        </Field>
+        <Field Name="GroupDisposalAmounts_2_Format">
+          <DataField>GroupDisposalAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_2__Control60">
+          <DataField>TotalEndingAmounts_2__Control60</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_2__Control60Format">
+          <DataField>TotalEndingAmounts_2__Control60Format</DataField>
+        </Field>
+        <Field Name="BookValueAtStartingDate_Control63">
+          <DataField>BookValueAtStartingDate_Control63</DataField>
+        </Field>
+        <Field Name="BookValueAtStartingDate_Control63Format">
+          <DataField>BookValueAtStartingDate_Control63Format</DataField>
+        </Field>
+        <Field Name="BookValueAtEndingDate_Control66">
+          <DataField>BookValueAtEndingDate_Control66</DataField>
+        </Field>
+        <Field Name="BookValueAtEndingDate_Control66Format">
+          <DataField>BookValueAtEndingDate_Control66Format</DataField>
+        </Field>
+        <Field Name="GroupHeadLine_Control15">
+          <DataField>GroupHeadLine_Control15</DataField>
+        </Field>
+        <Field Name="TotalStartAmounts_1_">
+          <DataField>TotalStartAmounts_1_</DataField>
+        </Field>
+        <Field Name="TotalStartAmounts_1_Format">
+          <DataField>TotalStartAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="TotalNetChangeAmounts_1_">
+          <DataField>TotalNetChangeAmounts_1_</DataField>
+        </Field>
+        <Field Name="TotalNetChangeAmounts_1_Format">
+          <DataField>TotalNetChangeAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="TotalDisposalAmounts_1_">
+          <DataField>TotalDisposalAmounts_1_</DataField>
+        </Field>
+        <Field Name="TotalDisposalAmounts_1_Format">
+          <DataField>TotalDisposalAmounts_1_Format</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_1__Control49">
+          <DataField>TotalEndingAmounts_1__Control49</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_1__Control49Format">
+          <DataField>TotalEndingAmounts_1__Control49Format</DataField>
+        </Field>
+        <Field Name="TotalStartAmounts_2_">
+          <DataField>TotalStartAmounts_2_</DataField>
+        </Field>
+        <Field Name="TotalStartAmounts_2_Format">
+          <DataField>TotalStartAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="TotalNetChangeAmounts_2_">
+          <DataField>TotalNetChangeAmounts_2_</DataField>
+        </Field>
+        <Field Name="TotalNetChangeAmounts_2_Format">
+          <DataField>TotalNetChangeAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="TotalDisposalAmounts_2_">
+          <DataField>TotalDisposalAmounts_2_</DataField>
+        </Field>
+        <Field Name="TotalDisposalAmounts_2_Format">
+          <DataField>TotalDisposalAmounts_2_Format</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_2__Control61">
+          <DataField>TotalEndingAmounts_2__Control61</DataField>
+        </Field>
+        <Field Name="TotalEndingAmounts_2__Control61Format">
+          <DataField>TotalEndingAmounts_2__Control61Format</DataField>
+        </Field>
+        <Field Name="BookValueAtStartingDate_Control64">
+          <DataField>BookValueAtStartingDate_Control64</DataField>
+        </Field>
+        <Field Name="BookValueAtStartingDate_Control64Format">
+          <DataField>BookValueAtStartingDate_Control64Format</DataField>
+        </Field>
+        <Field Name="BookValueAtEndingDate_Control67">
+          <DataField>BookValueAtEndingDate_Control67</DataField>
+        </Field>
+        <Field Name="BookValueAtEndingDate_Control67Format">
+          <DataField>BookValueAtEndingDate_Control67Format</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_FA_Class_Code">
+          <DataField>Fixed_Asset_FA_Class_Code</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_FA_Subclass_Code">
+          <DataField>Fixed_Asset_FA_Subclass_Code</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_Global_Dimension_1_Code">
+          <DataField>Fixed_Asset_Global_Dimension_1_Code</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_Global_Dimension_2_Code">
+          <DataField>Fixed_Asset_Global_Dimension_2_Code</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_FA_Location_Code">
+          <DataField>Fixed_Asset_FA_Location_Code</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_Component_of_Main_Asset">
+          <DataField>Fixed_Asset_Component_of_Main_Asset</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_FA_Posting_Group">
+          <DataField>Fixed_Asset_FA_Posting_Group</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
